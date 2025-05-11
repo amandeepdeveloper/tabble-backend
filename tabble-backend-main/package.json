@@ -1,0 +1,54 @@
+{
+  "name": "tabble_backend",
+  "version": "1.0.0",
+  "description": "This README would normally document whatever steps are necessary to get your application up and running.",
+  "main": "server.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --opts ./test/mocha.opts --exit",
+    "lint": "eslint ./",
+    "start": "node server.js"
+  },
+  "author": "Sneha",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "body-parser": "^1.15.0",
+    "bunyan": "^1.8.13",
+    "cors": "*",
+    "dotenv": "^16.4.7",
+    "express": "^4.13.4",
+    "fs": "0.0.2",
+    "http": "0.0.0",
+    "http-status": "^1.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "jwk-to-pem": "^2.0.4",
+    "moment": "^2.26.0",
+    "mongoose": "^5.9.18",
+    "mongoose-paginate": "^5.0.3",
+    "multer": "^1.4.5-lts.2",
+    "promise": "^8.1.0",
+    "request": "^2.88.2",
+    "sharp": "^0.33.5",
+    "twilio": "^5.4.0",
+    "util": "^0.12.0",
+    "uuid": "^8.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "faker": "^4.1.0",
+    "mocha": "^5.2.0",
+    "nock": "^10.0.6",
+    "promise": "^8.1.0",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0",
+    "supertest": "^4.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": ""
+}
