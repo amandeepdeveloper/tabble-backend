@@ -19,13 +19,13 @@ exports.MONGO_LOG_VERBOSE = process.env.hasOwnProperty('MONGO_LOG_VERBOSE')
   ? JSON.parse(process.env.MONGO_LOG_VERBOSE)
   : false;
 exports.LOG_FILE_PATH = process.env.LOG_FILE_PATH || 'log/api.log';
-exports.TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID || 'ACc597f696da875b2c9ae445f71da9be18';
-exports.TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN || '6869ebac874e0247dd1f0c2f14b77ad7';
-exports.TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER || '+15705397752';
+exports.TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID || process.env.TWILIO_ACCOUNT_SID;
+exports.TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN || process.env.TWILIO_AUTH_TOKEN;
+exports.TWILIO_PHONE_NUMBER = process.env.TWILIO_PHONE_NUMBER || process.env.TWILIO_PHONE_NUMBER;
 // exports.TWILIO_ACCOUNT_SID = 'ACc597f696da875b2c9ae445f71da9be18';
 // exports.TWILIO_AUTH_TOKEN = '6869ebac874e0247dd1f0c2f14b77ad7';
 // exports.TWILIO_PHONE_NUMBER = '+15705397752';
-exports.JWT_SECRET = process.env.JWT_SECRET || 'qwertyghjkl123bnm';
+exports.JWT_SECRET = process.env.JWT_SECRET || process.env.JWT_SECRET;
 
 
 global.appRoot = path.normalize(`${path.resolve(__dirname)}/..`);
