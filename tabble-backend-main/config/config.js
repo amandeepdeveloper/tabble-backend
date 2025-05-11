@@ -18,6 +18,8 @@ exports.MONGO_PASSWORD = '';
 exports.MONGO_LOG_VERBOSE = process.env.hasOwnProperty('MONGO_LOG_VERBOSE')
   ? JSON.parse(process.env.MONGO_LOG_VERBOSE)
   : false;
+
+  
 exports.LOG_FILE_PATH = process.env.LOG_FILE_PATH || 'log/api.log';
 exports.TWILIO_ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID || process.env.TWILIO_ACCOUNT_SID;
 exports.TWILIO_AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN || process.env.TWILIO_AUTH_TOKEN;
