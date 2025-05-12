@@ -59,6 +59,10 @@ class apiClient {
     return await this.groupCategoriesProvider.updateGroupCategory(userId, categoryId, incomingPayload.name);
   }
 
+  async findGroupIsTrue(groupId) {
+    return await this.groupsProvider.findGroupIsTrue(groupId);
+  }
+
   async deleteGroupCategory(userId, categoryId) {
     return await this.groupCategoriesProvider.deleteGroupCategory(userId, categoryId);
   }

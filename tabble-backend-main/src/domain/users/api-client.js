@@ -46,7 +46,9 @@ class apiClient {
   async getAllBlockedUsers(userId) {
     return await this.userProvider.getAllBlockedUsers(userId);
   }
-
+ async getAllFavoriteGroupList(userId) {
+    return await this.userProvider.getAllFavoriteGroupList(userId);
+  }
   async getAllMutedUsers(userId) {
     return await this.userProvider.getAllMutedUsers(userId);
   }

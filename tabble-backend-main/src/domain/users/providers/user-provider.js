@@ -191,6 +191,22 @@ class UserProvider {
       throw error;
     }
   }
+
+   async getAllFavoriteGroupList(userId, search) {
+    try {
+      const conditions = { _id: userId }
+
+      const projection = {
+        _id: 1,
+        favouriteGroups: 1,
+
+      };
+      return await this.userRepository.findUsers(conditions, projection);
+    } catch (error) {
+      console.error("Error fetching all users:", error);
+      throw error;
+    }
+  }
 }
 
 module.exports = {

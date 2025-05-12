@@ -138,6 +138,12 @@ class GroupsRepository {
     const [group] = await this.Groups.findGroups(conditions, selectParams);
     return group;
   }
+
+   async findGroups(conditions, selectparams = {}) {
+   
+    return await this.Groups.findGroups(conditions, selectparams);
+  }
+
 }
 
 module.exports = {

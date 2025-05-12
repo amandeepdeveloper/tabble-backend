@@ -86,5 +86,14 @@ module.exports = function (app, auth, commonValidator, eventEmitter) {
       errorHandler(err, req, res);
     });
   });
+
+  router.get('/allfavoritegroups', async (req, res) => {
+    client.getAllFavoriteGroupList(req.user.userId).then(user => {
+      return sendResponse(res, httpStatus.OK, user);
+    }).catch(err => {
+      errorHandler(err, req, res);
+    });
+  });
+
   app.use('/users', router);
 };

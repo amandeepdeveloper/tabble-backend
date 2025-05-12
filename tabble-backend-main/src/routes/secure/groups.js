@@ -113,5 +113,13 @@ module.exports = function (app, auth, commonValidator, eventEmitter) {
     });
   });
 
+   router.get('/istrue/:id', async (req, res) => {
+    client.findGroupIsTrue(req.params.id).then(user => {
+      return sendResponse(res, httpStatus.OK, user);
+    }).catch(err => {
+      errorHandler(err, req, res);
+    });
+  });
+
   app.use('/groups', router);
 };

@@ -195,6 +195,23 @@ class GroupsProvider {
       throw error;
     }
   }
+
+   async findGroupIsTrue(groupId) {
+    try {
+      const conditions = { _id: groupId };
+  
+      const selectparams = {
+        _id: 1,
+        isActive: 1,
+      };
+  
+      return await this.groupsRepository.findGroups(conditions,selectparams);
+      
+    } catch (error) {
+      console.error("Error fetching active group:", error);
+      throw error;
+    }
+  }
 }
 
 module.exports = {
